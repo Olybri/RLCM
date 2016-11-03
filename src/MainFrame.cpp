@@ -154,7 +154,7 @@ MainFrame::MainFrame(const std::string &exePath)
     m_resetButton->setFixedSize(120, 25);
     m_resetButton->setEnabled(false);
 
-    m_loadingMovie = new QMovie(":/data/img/loading.gif");
+    m_loadingMovie = new QMovie(":/img/loading.gif");
     m_loadingLabel = new QLabel(this);
     m_loadingLabel->setMovie(m_loadingMovie);
 
@@ -631,10 +631,10 @@ void MainFrame::showEasterEgg(const QString &text, const QString &imageFilename)
     msgBox.setWindowTitle("( ͡° ͜ʖ ͡°)");
     msgBox.setIcon(QMessageBox::NoIcon);
 
-    auto fontId = QFontDatabase::addApplicationFont(":/data/digital-7_mono.ttf");
+    auto fontId = QFontDatabase::addApplicationFont(":/digital-7_mono.ttf");
 
     msgBox.setText("<center><font face=\"" + QFontDatabase::applicationFontFamilies(fontId).at(0)
-        + "\" size=12>" + text + "</font><br><img src=\":/data/img/" + imageFilename + "\"></center>");
+        + "\" size=12>" + text + "</font><br><img src=\":/img/" + imageFilename + "\"></center>");
 
     msgBox.addButton("whatevs", QMessageBox::AcceptRole);
     msgBox.exec();

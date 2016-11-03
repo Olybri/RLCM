@@ -152,7 +152,7 @@ std::string Bundle::readString(LongLong address) noexcept
 
 std::vector<char> Bundle::loadResource(const std::string &filename, bool mod) noexcept
 {
-    QFile resource(QString(mod ? ":/data/mod/" : ":/data/default/") + QString(filename.c_str()).split("/").last());
+    QFile resource(QString(mod ? ":/mod/" : ":/default/") + QString(filename.c_str()).split("/").last());
 
     if(!resource.open(QIODevice::ReadOnly))
     {
