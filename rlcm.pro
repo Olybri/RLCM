@@ -11,7 +11,7 @@ static
     DEFINES += STATIC
 }
 
-CONFIG += C++14
+CONFIG += c++14
 
 QMAKE_CXXFLAGS += -Wall -Wextra -pedantic -pedantic-errors
 QMAKE_CXXFLAGS += -Wmain -Wswitch-enum -Wmissing-include-dirs
@@ -31,7 +31,7 @@ SOURCES += src/Bundle.cpp \
     src/Process.cpp \
     src/SpinBox.cpp
 
-HEADERS += rc/Bundle.hpp \
+HEADERS += src/Bundle.hpp \
     src/Challenge.hpp \
     src/Clock.hpp \
     src/MainFrame.hpp \
