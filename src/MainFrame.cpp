@@ -327,7 +327,7 @@ void MainFrame::loadChallenge()
     m_loadingLabel->show();
     m_loadingMovie->start();
 
-    m_loadWatcher.setFuture(QtConcurrent::run(this, loadChallengeThread));
+    m_loadWatcher.setFuture(QtConcurrent::run(this, &MainFrame::loadChallengeThread));
 }
 
 void MainFrame::onLoadChallengeFinished()
@@ -390,7 +390,7 @@ QString MainFrame::installTrainingRoomThread(bool install)
 void MainFrame::installTrainingRoom(bool install)
 {
     m_trainingCheck->setEnabled(false);
-    m_trainingWatcher.setFuture(QtConcurrent::run(this, installTrainingRoomThread, install));
+    m_trainingWatcher.setFuture(QtConcurrent::run(this, &MainFrame::installTrainingRoomThread, install));
 }
 
 void MainFrame::onInstallTrainingRoomFinished()
