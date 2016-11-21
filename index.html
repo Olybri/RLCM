@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RLCM</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta name="theme-color" content="#bb6666">
+  </head>
+  <body>
+    <div class="page">
+      <h1>RL challenge manager</h1>
+      <div class="content">
+        <div class="tab selected" onclick="changePage(event, 'home');">Home</div>
+        <div class="tab tablink" onclick="changePage(event, 'download');">Download</div>
+        <div class="tab tablink" onclick="changePage(event, 'faq');">FAQ</div>
+        <div class="tab tablink" onclick="changePage(event, 'about');">Contact</div>
+        <div id="home" class="tabpage box">
+          <h2>Rayman® Legends Challenge Manager</h2>
+          <p>RLCM is a small application which allows you to <b>install and play in the secret training room</b> in Rayman® Legends, as well as to change the <b>rules</b> of those challenges and <b>play past challenges again</b>.</p>
+          <img src="rlcm.png" class="pic">
+          <h3>Quick user guide</h3>
+          <p>When launching RLCM for the first time, the game needs to be running so that the tool is able to locate the game directory automatically. The second step is to install the training room, yet this can only be done while the game is fully closed. You can easily uninstall and reinstall the training room whenever you want, as long as the game is not running.</p>
+          <p>To start using the features, go into any challenge of your choice, and click the <i>"load challenge"</i> button. RLCM will then seek for the current challenge informations and rules through the game's memory. Once done, you are able to edit those rules.</p>
+          <ul>
+            <li><b>Seed</b> : an hexadecimal value which determines how the level is generated.</li>
+            <li><b>Goal</b> : the goal to reach in order to fulfill the challenge.
+            <li><b>Limit</b> : the minimal score one must get to achieve the challenge.
+          </ul>
+          <p>Once the modifications are applied, it is sometimes necessary to restart the challenge, especially if the seed has been changed. Note that you can <b>load an online challenge</b> as well, yet you won't be able to edit the rules.</p>
+          <p>To play again a <b>past online challenge</b>, you need to enter a challenge in the training room that matches with the past one, and edit the seed so that it is the same as the past challenge. A history of all the pas challenge's seed can be found <a href="https://docs.google.com/spreadsheets/d/1sf1vI7HDCn-LhfSgex8fQ3V52b3uu0zCih_Hjm4i1KQ">here</a>.</p>
+        </div>
+        <div id="download" class="tabpage box hidden">
+          <h2>Latest stable version</h2>
+          <table class="top">
+            <tr>
+              <th>RLCM 2.0</th>
+              <th><div class="tab button"><span>Download <i class="fa fa-download"></i></span></div></th>
+            </tr>
+          </table>
+          <br>
+          <h2>All versions</h2>
+          <table>
+            <tr>
+              <th>Version</th>
+              <th>Release</th>
+              <th>Size</th>
+              <th>Binaries</th>
+            </tr>
+            <tr>
+              <td>2.0</td>
+              <td>2016/12/12</td>
+              <td>18.2 MiB</td>
+              <td><div class="tab button"><span>Download <i class="fa fa-download"></i></span></div></td>
+            </tr>
+          </table>
+          <h2>Version 1</h2>
+          <table>
+            <tr>
+              <th>Version</th>
+              <th>Release</th>
+              <th>Size</th>
+              <th>Binaries</th>
+            </tr>
+            <tr>
+              <td>1.2</td>
+              <td>2016/12/12</td>
+              <td>18.2 MiB</td>
+              <td><div class="tab button"><span>Download <i class="fa fa-download"></i></span></div></td>
+            </tr>
+            <tr>
+              <td>1.1</td>
+              <td>2015/11/12</td>
+              <td>9.8 MiB</td>
+              <td><div class="tab button"><span>Download <i class="fa fa-download"></i></span></div></td>
+            </tr>
+            <tr>
+              <td>1.0</td>
+              <td>2014/08/30</td>
+              <td>9.1 MiB</td>
+              <td><div class="tab button"><span>Download <i class="fa fa-download"></i></span></div></td>
+            </tr>
+          </tr>
+        </table>
+        <h2>Beta version</h2>
+        <table>
+          <tr>
+            <th>Version</th>
+            <th>Release</th>
+            <th>Size</th>
+            <th>Binaries</th>
+          </tr>
+          <tr>
+            <td>beta 1.2</td>
+            <td>2013/12/12</td>
+            <td>18.2 MiB</td>
+            <td><div class="tab button"><span>Download <i class="fa fa-download"></i></span></div></td>
+          </tr>
+          <tr>
+            <td>beta 1.1</td>
+            <td>2013/11/12</td>
+            <td>9.8 MiB</td>
+            <td><div class="tab button"><span>Download <i class="fa fa-download"></i></span></div></td>
+          </tr>
+          <tr>
+            <td>beta 1.0</td>
+            <td>2012/08/30</td>
+            <td>9.1 MiB</td>
+            <td><div class="tab button"><span>Download <i class="fa fa-download"></i></span></div></td>
+          </tr>
+        </tr>
+      </table>
+        </div>
+        <div id="faq" class="tabpage box hidden">
+          <h2>Frequently asked questions</h2>
+          <h3>Why can I not access Murphy's Dungeon challenge in the training room?</h3>
+          <p>This painting in the training room points to a nonexistent level file, which causes the game just to ignore it. We've already tried to change the file name and the pointed level name, but that doesn't seem to work. If you find a workaround, please let us know!</p>
+          <h3>Why does the tool says "seed not found"?</h3>
+          <p>The first thing RLCM is looking for in the memory is the seed value of the challenge. Once found, it can easily reach every other informations needed. To find the seed, it looks for a specific pattern in the memory. However, it sometimes happens that the pattern is a bit different, and the tool can't find any matches. If so, try to restart the challenge and click the load button <b>before</b> starting the actual run. If it still doesn't work, try to exit and reenter the level again.</p>
+          <h3>How can I help develop the project?</h3>
+          <p>If you're interested in the project, wheter you're a programmer or not, you can contact us on the "contact" tab. Any kind of help is appreciated.</p>
+          <p>The project is open-source and <a href="https://github.com/olybri/rlcm">available on github</a>, feel free to fork and create pull requests.</p>
+        </div>
+        <div id="about" class="tabpage box hidden">
+          <h2>About RLCM</h2>
+          <p>We are a small team of four persons. <b>DJTHED</b>, who discoverd the existence of a training room in Rayman legends; <b>CaneOfPacci</b>, who managed to unlock that room on the PC version; <b>UsWar</b>, who helped developping the project; and myself, <b>Olybri</b>, who wrote the code of the actual tool.</p>
+          <h2>Contact us</h2>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <footer class="box">
+      asdf
+    </footer>
+    <script>
+    function changePage(evt, tab)
+    {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("tabpage");
+      for (i = 0; i < x.length; i++)
+        if(x[i].id != tab)
+          x[i].className = "tabpage box hidden";
+
+      tablinks = document.getElementsByClassName("tab");
+      for (i = 0; i < x.length; i++)
+          tablinks[i].className = "tab tablink";
+
+      document.getElementById(tab).className = "tabpage box";
+      evt.currentTarget.className = "tab selected";
+    }
+    </script>
+  </body>
+</html>
