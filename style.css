@@ -1,22 +1,22 @@
 @font-face {
-    font-family: "dejavu sans";
-    src: url('DejaVuSans.ttf');
+    font-family: "open sans";
+    src: url('font/OpenSans-Regular.ttf');
 }
 
 @font-face {
-    font-family: "dejavu sans light";
-    src: url('DejaVuSans-ExtraLight.ttf');
+    font-family: "open sans light";
+    src: url('font/OpenSans-Light.ttf');
 }
 
 body {
   background-image: url("noise_1.png");
   background-color: #edc;
   text-align: center;
-  font-family: "Dejavu sans";
+  font-family: "open sans";
 }
 
 h1{
-  font-family: "Dejavu sans light";
+  font-family: "open sans light";
   font-size: 4em;
   font-weight: lighter;
 }
